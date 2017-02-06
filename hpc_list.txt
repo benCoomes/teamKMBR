@@ -19,5 +19,14 @@ OS: Linux
 SCHEDULER: Torque/Moab
 FILE SYS: Lustre
 BEST SITE: ???
-NOTES: Could be okay, but I've seen mentions of Intel's Many Integrated 
-Core architechture, which might be proprietary... 
+NOTES: Could be good, seems like there is nothing remarkable about it. 
+Also, Torque and Moab are related to PBS. 
+
+NAME: XStream
+URL: https://portal.xsede.org/stanford-xstream#compenv
+OS: Linux 
+SCHEDULER: Slurm
+FILE SYS: Lustre
+BEST SITE: ???
+NOTES: designed for computing with GPUS, each node has 8 GPUS. Also, I 
+couldn't find any info about installation, so this may be a bad choice. 
