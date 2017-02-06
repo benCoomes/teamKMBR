@@ -1,0 +1,9 @@
+sample format: 
+
+URL: <url>
+OS: <name of os>
+SCHEDULER: <name of scheduler>
+FILE SYS: <name of distributed/ parllel file systems>
+BEST SITE: <name of best cloudlab site for implementing the system>
+
+
