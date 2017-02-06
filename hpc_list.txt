@@ -1,9 +1,23 @@
 sample format: 
 
+NAME: <cluster name>
 URL: <url>
 OS: <name of os>
 SCHEDULER: <name of scheduler>
 FILE SYS: <name of distributed/ parllel file systems>
 BEST SITE: <name of best cloudlab site for implementing the system>
+NOTES: <whatever you want to say>
 
+NAME: Red
+NOTES: seems like a bad choice. It is actually made of multiple clusters 
+in remote locations, so it is bad for jobs that that require message
+passing, which may be the kind of test programs we will run. 
 
+NAME: Beacon
+URL: https://www.nics.utk.edu/beacon
+OS: Linux
+SCHEDULER: Torque/Moab
+FILE SYS: Lustre
+BEST SITE: ???
+NOTES: Could be okay, but I've seen mentions of Intel's Many Integrated 
+Core architechture, which might be proprietary... 
