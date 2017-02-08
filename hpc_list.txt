@@ -15,6 +15,7 @@ SCHEDULER: YARN?
 FILE SYS: Hadoop
 BEST SITE: Wisconsin (big data frameworks)
 NOTES: Has similar documentation to Palmetto so it might be the safest bet.
+TAKEN
 
 NAME: Beacon
 URL: https://www.nics.utk.edu/beacon
@@ -33,6 +34,7 @@ FILE SYS: Lustre
 BEST SITE: Clemson (some Clemson nodes have GPUs)
 NOTES: designed for computing with GPUS, each node has 8 GPUS. Also, I 
 couldn't find any info about installation, so this may be a bad choice. 
+TAKEN
 
 NAME: Wrangler
 URL: https://portal.xsede.org/tacc-wrangler
@@ -40,7 +42,8 @@ OS: Linux (CentOS)
 SCHEDULER: Slurm
 FILE SYS: Lustre
 BEST SITE: Wisconsin (for high I/O)
-NOTES: Used for high bandwidth I/O
+NOTES: Used for high bandwidth I/O 
+TAKEN
 
 NAME: Red
 NOTES: seems like a bad choice. It is actually made of multiple clusters 
