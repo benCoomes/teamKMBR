@@ -1,13 +1,3 @@
-sample format: 
-
-NAME: <cluster name>
-URL: <url>
-OS: <name of os>
-SCHEDULER: <name of scheduler>
-FILE SYS: <name of distributed/ parllel file systems>
-BEST SITE: <name of best cloudlab site for implementing the system>
-NOTES: <whatever you want to say>
-
 NAME: Beacon
 URL: https://www.nics.utk.edu/beacon
 OS: Linux
@@ -17,17 +7,12 @@ BEST SITE: Wisconsin
 NOTES: Could be good, seems like there is nothing remarkable about it. 
 Also, Torque and Moab are related to PBS. This would be our best option. 
 
-NAME: Red
-NOTES: seems like a bad choice. It is actually made of multiple clusters 
-in remote locations, so it is bad for jobs that that require message
-passing, which may be the kind of test programs we will run. 
-
 NAME: Trestles
 URL: uark.xsede.org
 OS: CentOS
-SCHEDULER: <name of scheduler> ???
+SCHEDULER: PBS
 FILE SYS: Lustre
-BEST SITE: Arkansas (University of Arkansas)
+BEST SITE: Wisconsin
 NOTES: Designed to maintain fast queue turnaround time and optimize utilization. 
 It would be useful as a backup option. 
 

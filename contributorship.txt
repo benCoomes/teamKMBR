@@ -1,0 +1,11 @@
+Ben Coomes, Matthew Rodgers, Kayleig Semerano, and Ryan Becwar worked on
+this assignment together. 
+
+Each member wrote 2 or more entries for the list of systems to implement, 
+but most of these were removed because they were already taken. 
+
+Each member also uploaded their respective resume. 
+
+The resources used to complete this assigment were the xsede resources page
+(https://www.xsede.org/resources/overview) and the websites found at the urls
+given in hpc_list.txt. 
