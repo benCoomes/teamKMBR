@@ -15,18 +15,20 @@ SCHEDULER: Torque/Moab
 FILE SYS: Lustre
 BEST SITE: Wisconsin
 NOTES: Could be good, seems like there is nothing remarkable about it. 
-Also, Torque and Moab are related to PBS. 
-
-NAME: XStream
-URL: https://portal.xsede.org/stanford-xstream#compenv
-OS: Linux 
-SCHEDULER: Slurm
-FILE SYS: Lustre
-BEST SITE: Clemson (some Clemson nodes have GPUs)
-NOTES: designed for computing with GPUS, each node has 8 GPUS. Also, I 
-couldn't find any info about installation, so this may be a bad choice. 
+Also, Torque and Moab are related to PBS. This would be our best option. 
 
 NAME: Red
 NOTES: seems like a bad choice. It is actually made of multiple clusters 
 in remote locations, so it is bad for jobs that that require message
 passing, which may be the kind of test programs we will run. 
+
+NAME: Trestles
+URL: uark.xsede.org
+OS: CentOS
+SCHEDULER: <name of scheduler> ???
+FILE SYS: Lustre
+BEST SITE: Arkansas (University of Arkansas)
+NOTES: Designed to maintain fast queue turnaround time and optimize utilization. 
+It would be useful as a backup option. 
+
+
