@@ -8,10 +8,13 @@ FILE SYS: <name of distributed/ parllel file systems>
 BEST SITE: <name of best cloudlab site for implementing the system>
 NOTES: <whatever you want to say>
 
-NAME: Red
-NOTES: seems like a bad choice. It is actually made of multiple clusters 
-in remote locations, so it is bad for jobs that that require message
-passing, which may be the kind of test programs we will run. 
+NAME: Cypress
+URL: https://www.palmetto.clemson.edu/
+OS: Unix
+SCHEDULER: YARN?
+FILE SYS: Hadoop
+BEST SITE: <name of best cloudlab site for implementing the system>
+NOTES: Has similar documentation to Palmetto so it might be the safest bet.
 
 NAME: Beacon
 URL: https://www.nics.utk.edu/beacon
@@ -27,14 +30,19 @@ URL: https://portal.xsede.org/stanford-xstream#compenv
 OS: Linux 
 SCHEDULER: Slurm
 FILE SYS: Lustre
-BEST SITE: ???
+BEST SITE: Clemson (some Clemson nodes have GPUs I think. Might want to double check that)
 NOTES: designed for computing with GPUS, each node has 8 GPUS. Also, I 
 couldn't find any info about installation, so this may be a bad choice. 
 
-NAME: Cypress
-URL: <url>
-OS: Unix
-SCHEDULER: YARN?
-FILE SYS: Hadoop
-BEST SITE: <name of best cloudlab site for implementing the system>
-NOTES: Has similar documentation to Palmetto so it might be the safest bet.
+NAME: Wrangler
+URL: https://portal.xsede.org/tacc-wrangler
+OS: Linux (CentOS)
+SCHEDULER: Slurm
+FILE SYS: Lustre
+BEST SITE: Whichever one was the high I/O one (Wisconsin I think)
+NOTES: Used for high bandwidth I/O
+
+NAME: Red
+NOTES: seems like a bad choice. It is actually made of multiple clusters 
+in remote locations, so it is bad for jobs that that require message
+passing, which may be the kind of test programs we will run. 
