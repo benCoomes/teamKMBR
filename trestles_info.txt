@@ -1,0 +1,22 @@
+Trestles was originally installed at UCSD, so maybe there is documentation
+about it available on UCSD websites as well.
+
+It seems like trestles was removed from the XSEDE resources page... Maybe
+we should mention this to Dr. Ngo? 
+
+from http://hpc.uark.edu/hpc-resources/index.php - 
+256 cmputer nodes, all have quad octa-core AMD Opteron 2.5GHz processors
+with 64 GB of memory and 120GB of SSD local disk. Interconnection is 
+provided by 324-port QDR 4- Gbps nonblocking Mellanox Infiniband switch, 
+and is connected to Lustre file systems with 16TB of scratch space and 350TB
+of main storage. (Is that storage for the whole system? Seems small. At 
+least the nodes are homogenous, so we can make a homogenous cluster on 
+cloudLab).
+
+We could try to sign up for training or request resources here: 
+http://hpc.uark.edu/hpc-training/index.php
+
+Good info here: http://hpcwiki.uark.edu/doku.php/trestles_usage
+Trestles has more cores which are less powerful (than the Razor computer), 
+so it is better suited to code with good parallel performance. 
+
