@@ -10,7 +10,11 @@ sudo ./configure --prefix="/home/$USER/.openmpi"
 
 sudo make install
 
-export PATH="$PATH:/home/$USER/.openmpi/bin"
+NEWPATH='PATH=$PATH:/home/$USER/.openmpi/bin'
+NEWLD_LIB='LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/$USER/.openmpi/lib/'
+EXPORT_LDLIB='export LD_LIBRARY_PATH'
 
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/$USER/.openmpi/lib/"
+echo $NEWPATH >> ~/.bash_profile
+echo $NEWLD_LIB >> ~/.bash_profile
+echo $EXPORT_LDLIB >> ~/.bash_profile
 
