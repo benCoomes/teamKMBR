@@ -6,9 +6,9 @@ tar -xvf openmpi-1.10.3.tar.gz
 
 cd openmpi-1.10.3
 
-sudo ./configure --prefix="/home/$USER/.openmpi"
+./configure --prefix="/home/$USER/.openmpi"
 
-sudo make install
+make install
 
 NEWPATH='PATH=$PATH:/home/$USER/.openmpi/bin'
 NEWLD_LIB='LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/$USER/.openmpi/lib/'
