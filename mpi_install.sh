@@ -18,3 +18,6 @@ echo $NEWPATH >> ~/.bash_profile
 echo $NEWLD_LIB >> ~/.bash_profile
 echo $EXPORT_LDLIB >> ~/.bash_profile
 
+source ~/.bash_profile
+echo "BASH PROFILE:"
+cat ~/.bash_profile
