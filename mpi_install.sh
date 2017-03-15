@@ -6,12 +6,12 @@ tar -xvf openmpi-1.10.3.tar.gz
 
 cd openmpi-1.10.3
 
-./configure --prefix="/home/$USER/.openmpi"
+./configure --prefix="/users/$USER/.openmpi"
 
 make install
 
 NEWPATH='PATH=$PATH:/home/$USER/.openmpi/bin'
-NEWLD_LIB='LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/$USER/.openmpi/lib/'
+NEWLD_LIB='LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/users/$USER/.openmpi/lib/'
 EXPORT_LDLIB='export LD_LIBRARY_PATH'
 
 echo $NEWPATH >> ~/.bash_profile
