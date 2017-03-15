@@ -1,6 +1,8 @@
 #!/bin/bash
 
-source ~/.bash_profile
+module load openmpi-x86_64
+echo "MODULE LIST"
+module list
 
 wget https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh
 
