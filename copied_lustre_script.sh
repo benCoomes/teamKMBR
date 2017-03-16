@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# from lustre.ornl.gov
+# from http://lustre.ornl.gov/lustre101-courses/content/C1/L3/LustreBasicInstall.pdf
 # NOTE: not ready to run, needs to be partioned to different types of servers
 
 # Prepare servers and client
@@ -77,14 +77,40 @@
    rpm -ivh lustre-client-modules-2.7.0-2.6.32_504.8.1.el6.x86_64.x86_64.rpm
    rpm -ivh lustre-client-2.7.0-2.6.32_504.8.1.el6.x86_64.x86_64.rpm
 
-# MGS/MDS Configuration / Starting the File System
-   # To be copied
+# MGS/MDS Configuration / Starting the File System ( [root@mgs_mds]$ )
+   # Format the MGT
+   mkfs.lustre --mgs /dev/sdb
 
-# OSS Configuration
-   # To be copied
+   # Format the MDT
+   mkfs.lustre --fsname=lustre \
+   --mgsnode=mgs_mds@tcp --mdt --index=0 /dev/sdc
+   
+   # Mount the MGT
+   mkdir /mnt/mgt
+   mount –t lustre /dev/sdb /mnt/mgt
+   
+   # Mount the MDT
+   mkdir /mnt/mdt
+   mount –t lustre /dev/sdc /mnt/mdt
 
-# Client Configuration
-   # To be copied
+# OSS Configuration ( [root@oss]$ )
+   # Format the OSTs on the OSS
+   mkfs.lustre --fsname=lustre --ost \
+   --mgsnode=mgs_mds@tcp --index=0 /dev/sdb
+
+   # Mount the OSTs
+   mkdir /mnt/ost0 /mnt/ost1
+   mount –t lustre /dev/sdb /mnt/ost0
+   mount –t lustre /dev/sdc /mnt/ost1
+
+# Client Configuration ( [root@client]$ )
+   # Mount the Lustre file system
+   mkdir /mnt/lustre
+   mount –t lustre mgs_mds@tcp:/lustre /mnt/lustre
+
+   # Create a test file to ensure the system is working
+   touch /mnt/lustre/testFile
+   ls /mnt/lustre
 
 # Multiple File Systems
-   # To be copied
+   # Do we need this?
