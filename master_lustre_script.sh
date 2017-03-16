@@ -12,9 +12,10 @@
    else
       exists='cat /etc/sysconfig/selinux | grep SELINUX'
       if [ exists ]; then
-         sed -ie 's/SELINUX=.*$/SELINUX=disabled'
+         sed -ie 's/SELINUX=.*$/SELINUX=disabled/' /etc/sysconfig/selinux
       else
          echo "SELINUX=disabled" >> /etc/sysconfig/selinux
+      fi
    fi
 
    # Disable iptables
@@ -23,7 +24,7 @@
    reboot # Gotta make sure the script keeps going
 
    # Update kernel-firmware
-   yum updage kernel-firmware
+   yum update kernel-firmware
 
    # Make sure there's a non-loopback address
 
@@ -34,9 +35,10 @@
    else
       exists='cat /etc/sysconfig/selinux | grep options lnet networks'
       if [ exists ]; then
-         sed -ie 's/options lnet networks.*$/options lnet networks=tcp'
+         sed -ie 's/options lnet networks.*$/options lnet networks=tcp/' /etc/modprobe.d/lustre.conf
       else
          echo "options lnet networks=tcp" >> /etc/modprobe.d/lustre.conf
+      fi
    fi
 
 
