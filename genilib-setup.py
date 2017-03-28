@@ -27,10 +27,16 @@ link = request.LAN("lan")
 link.addInterface(iface1)
 link.addInterface(iface2)
 
-node1.addService(rspec.Install(
-  url="https://www.open-mpi.org/software/ompi/v1.10/downloads/openmpi-1.10.3.tar.gz", 
-  path="/local"))
-node1.addService(rspec.Execute(shell="bash", command="tar -xvf /local/openmpi-1.10.3.tar.gz"))
+node1.addService(rspec.Execute(
+   shell="/bin/bash", 
+   command="sudo git clone https://github.com/benCoomes/teamKMBR.git /teamKMBR"))
+node1.addService(rspec.Execute(
+   shell="/bin/bash", 
+   command="sudo chmod 755 /teamKMBR/*install.sh"))
+node1.addService(rspec.Execute(
+   shell="/bin/bash", 
+   command='sudo /teamKMBR/mpi_install.sh'))
+
 
 # Print the RSpec to the enclosing page.
 portal.context.printRequestRSpec()
