@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ssh -t $1 'sudo git clone https://github.com/benCoomes/teamKMBR.git /teamKMBR'
-ssh -t $1 'chmod 755 /teamKMBR/*install.sh'
+ssh -t $1 'sudo chmod 755 /teamKMBR/*install.sh'
 echo "Cloned git repo"
 
 echo "Starting mpi install, this may take a few minutes..."

@@ -1,0 +1,20 @@
+How do we use module? 
+	Where/how do we install software to be loaded with module?
+
+The tutorials for installing mpi on multiple nodes say to use NFS to create a 
+shared directory for use with mpi. Do we need NFS to get mpi to work, or will 
+Lustre do the job of NFS? 
+see: http://mpitutorial.com/tutorials/running-an-mpi-cluster-within-a-lan/ 
+
+The same mpi tutorial also says to install openssh-server... do we need to do this?
+Also, it says that one node should be a master node and the others are slaves. How
+should this be managed on a shared system where users request subsets of available
+nodes? 
+
+Where should we modify the PATH varible, if necessary? 
+
+Should mountable directories only be created after lustre is installed? 
+
+
+
+
