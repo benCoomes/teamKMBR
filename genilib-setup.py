@@ -28,14 +28,14 @@ link.addInterface(iface1)
 link.addInterface(iface2)
 
 node1.addService(rspec.Execute(
-   shell="/bin/bash", 
+   shell="bash", 
    command="sudo git clone https://github.com/benCoomes/teamKMBR.git /teamKMBR"))
-node1.addService(rspec.Execute(
-   shell="/bin/bash", 
-   command="sudo chmod 755 /teamKMBR/*install.sh"))
-node1.addService(rspec.Execute(
-   shell="/bin/bash", 
-   command='sudo /teamKMBR/mpi_install.sh'))
+#node1.addService(rspec.Execute(
+#   shell="bash", 
+#   command="sudo chmod 755 /teamKMBR/*install.sh"))
+#node1.addService(rspec.Execute(
+#   shell="bash", 
+#   command="sudo /teamKMBR/mpi_install.sh"))
 
 
 # Print the RSpec to the enclosing page.
