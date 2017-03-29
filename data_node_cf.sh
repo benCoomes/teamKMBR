@@ -8,8 +8,9 @@ echo "Starting mpi install, this may take a few minutes..."
 ssh -t $1 'sudo /teamKMBR/mpi_install.sh'
 echo "Done.\n"
 
-ssh -t $1 'sudo yum -y environment-modules'
+ssh -t $1 'sudo yum -y install environment-modules'
 ssh -t $1 'sudo cp /teamKMBR/openmpi-1.10.3 /usr/share/Modules/modulefiles/openmpi-1.10.3' 
+ssh -t $1 'sudo cp /teamKMBR/anaconda3-4.3.1 /usr/share/Modules/modulefiles/anaconda3-4.3.1' 
 
 echo "Starting python install, this may take a few minutes..."
 ssh $1  '/teamKMBR/python_install.sh'

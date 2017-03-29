@@ -8,5 +8,6 @@ cd openmpi-1.10.3
 make 
 make install
 
-echo export PATH="$PATH:/software/openmpi/1.10.3/bin" >> /$HOME/.bashrc
-echo export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/software/openmpi/1.10.3/lib/" >>/etc/environment
+#don't need these - path setting is handled by environment-modules
+#echo export PATH="$PATH:/software/openmpi/1.10.3/bin" >> /$HOME/.bashrc
+#echo export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/software/openmpi/1.10.3/lib/" >>/etc/environment

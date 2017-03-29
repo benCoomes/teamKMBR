@@ -1,0 +1,7 @@
+1. install openmpi (or have it installed on mountable directory)
+2. use yum to install environment-modules
+2.1 log out and in to finish environment-modules install
+3. copy the environment modulefile to the modulefiles directory - 
+	see where this is by looking out output of module avail
+4. load openmpi
+4. run python install
