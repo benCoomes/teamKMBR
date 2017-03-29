@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## modules compilers/openmpi-1.10.3
+##
+## modulefiles/compilers/openmpi-1.10.3.  Written by Jeff Layton.
+## Modified by Ben Coomes
+##
+proc ModulesHelp { } {
+        global version modroot
+
+        puts stderr "openmpi-1.10.3 - sets the Environment for openmpi"
+}
+
+module-whatis   "Sets the environment for using openmpi"
+
+# for Tcl script use only
+set     topdir          /software/openmpi/1.10.3
+set     version         1.10.3
+set     sys             linux86
+
+prepend-path    PATH            $topdir/bin
+prepend-path    LD_LIBRARY_PATH $topdir/lib
+
