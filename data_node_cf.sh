@@ -13,6 +13,6 @@ ssh -t $1 'sudo cp /teamKMBR/openmpi-1.10.3 /usr/share/Modules/modulefiles/openm
 ssh -t $1 'sudo cp /teamKMBR/anaconda3-4.3.1 /usr/share/Modules/modulefiles/anaconda3-4.3.1' 
 
 echo "Starting python install, this may take a few minutes..."
-ssh $1  '/teamKMBR/python_install.sh'
+ssh -t $1  'sudo /teamKMBR/python_install.sh'
 echo "Done. Node successfully configured!" 
 echo "(note that node may not be successfully configured)... ;)"

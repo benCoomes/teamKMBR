@@ -15,4 +15,4 @@ module load anaconda3-4.3.1
 #source ~/.bash_profile
 
 pip install --user mpi4py #should we install as user? 
-
+rm ~/Anaconda3-4.3.1-Linux-x86_64.sh
