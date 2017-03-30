@@ -4,6 +4,4 @@ comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
 size = comm.Get_size()
 name = MPI.Get_processor_name()
-print("Hello from process" + rank 
-   + "running on host" + name 
-   + "out of" + size + "processes")
+print("Hello from process %d on host %s out of %d processes" % (rank, name, size))
