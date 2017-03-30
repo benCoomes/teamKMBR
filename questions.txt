@@ -1,22 +1,37 @@
 How do we use module? 
 	Where/how do we install software to be loaded with module?
+	module must be installed. after installation, create modulefiles in the 
+	modulfiles directory (run 'module avil' to see where this is) to load
+	software using module. The software can be installed anywhere, 
+	because modulefiles just modify PATH so that the software is included. 
 
 The tutorials for installing mpi on multiple nodes say to use NFS to create a 
 shared directory for use with mpi. Do we need NFS to get mpi to work, or will 
 Lustre do the job of NFS? 
 see: http://mpitutorial.com/tutorials/running-an-mpi-cluster-within-a-lan/ 
+still need nfs - they serve different purposes. Lustre is for performance file 
+sharing for running parallel applications. NFS is not fast, but it is good for 
+creating mountable directories to store shared software in. 
 
 The same mpi tutorial also says to install openssh-server... do we need to do this?
 Also, it says that one node should be a master node and the others are slaves. How
 should this be managed on a shared system where users request subsets of available
 nodes? 
+Yes, openssh-server will need to be installed. 
 
 Where should we modify the PATH varible, if necessary? 
+A: /etc/profile
 
 Should mountable directories only be created after lustre is installed? 
+no, these are created with NFS
 
 After completing the install of openmpi, is it okay to remove the directory
 produced by untaring the openmpi tarball? (openmpi-1.10.3.tar.gz) If not, 
 where should this directory be located? 
+yes, it can be removed
 
+module install - try manual install to /usr/local - see installation instructions
+for cluster here: 
+
+to save path when sudoing to su, use sudo -i <command>
 
