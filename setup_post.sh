@@ -1,7 +1,8 @@
 #!/bin/bash
 
    # Update kernel-firmware
-   yum update kernel-firmware
+   yum update kernel-firmware -y
+   yum install dracut-kernel -y
 
    # Make sure there's a non-loopback address
 
