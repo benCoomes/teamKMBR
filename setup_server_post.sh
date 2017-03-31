@@ -16,10 +16,11 @@
    wget https://downloads.hpdd.intel.com/public/e2fsprogs/latest/el6/RPMS/x86_64/e2fsprogs-1.42.13.wc5-7.el6.x86_64.rpm --no-check-certificate
    wget https://downloads.hpdd.intel.com/public/e2fsprogs/latest/el6/RPMS/x86_64/e2fsprogs-libs-1.42.13.wc5-7.el6.x86_64.rpm --no-check-certificate
    wget https://downloads.hpdd.intel.com/public/e2fsprogs/latest/el6/RPMS/x86_64/libcom_err-1.42.13.wc5-7.el6.x86_64.rpm --no-check-certificate
+   wget https://downloads.hpdd.intel.com/public/e2fsprogs/latest/el6/RPMS/x86_64/libcom_err-devel-1.42.13.wc5-7.el6.x86_64.rpm --no-check-certificate
    wget https://downloads.hpdd.intel.com/public/e2fsprogs/latest/el6/RPMS/x86_64/libss-1.42.13.wc5-7.el6.x86_64.rpm --no-check-certificate
 
    # Update / install e2fsprogs and related libraries
-   rpm -Uvh e2fsprogs-1.42.13.wc5-7.el6.x86_64.rpm e2fsprogs-libs-1.42.13.wc5-7.el6.x86_64.rpm libcom_err-1.42.13.wc5-7.el6.x86_64.rpm libss-1.42.13.wc5-7.el6.x86_64.rpm
+   rpm -Uvh e2fsprogs-1.42.13.wc5-7.el6.x86_64.rpm e2fsprogs-libs-1.42.13.wc5-7.el6.x86_64.rpm libcom_err-1.42.13.wc5-7.el6.x86_64.rpm libss-1.42.13.wc5-7.el6.x86_64.rpm libcom_err-devel-1.42.13.wc5-7.el6.x86_64.rpm
 
    # Install lustre rpms
    rpm -ivh lustre-modules-*
