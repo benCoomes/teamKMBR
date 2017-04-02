@@ -1,5 +1,7 @@
 #!/bin/bash
 
+   yum install net-snmp net-snmp-utils libyaml sg3_utils -y
+
    # Download Lustre server modules
    # from https://downloads.hpdd.intel.com/public/lustre/lustre-2.7.0/el6.6/server/RPMS/x86_64/
    # download: lustre-2.7.0 lustre-iokit lustre-modules lustre-osd-ldiskfs lustre-osd-ldiskfs-mount lustre-tests
