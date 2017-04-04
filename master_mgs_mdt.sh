@@ -4,7 +4,7 @@ workingpath='/users/mdrodge/teamKMBR/'
 
 if [ -e "$workingpath"config_mgs_mdt_log.txt ]; then
    # Nothing. Done.
-   echo "Nothing" > /dev/null
+   echo "nothing" > /dev/null
 elif [ -e "$workingpath"server_log.txt ]; then
    # server post and config mgs_mdt or oss
    sudo "$workingpath"setup_server_post.sh | tee -a "$workingpath"server_log.txt
