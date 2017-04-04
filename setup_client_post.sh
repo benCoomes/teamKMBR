@@ -1,5 +1,7 @@
 #!/bin/bash
 
+   yum install net-snmp libyaml -y
+
    # Download Lustre client modules
    # from https://downloads.hpdd.intel.com/public/lustre/lustre-2.7.0/el6.6/client/RPMS/x86_64/
    # download: lustre-client-modules lustre-client
