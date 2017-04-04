@@ -11,32 +11,20 @@ import geni.rspec.pg as rspec
 
 # Create a Request object to start building the RSpec.
 request = portal.context.makeRequestRSpec()
- 
-# Create raw PCs with CentOs 6.6 installed
-node1 = request.RawPC("node1")
-node1.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:CENTOS66-64-STD"
+nodeNames = ["client1", "client2", "client3", 
+         "nfsserv", "oss1", "oss2", "mgs_mdt"]
+ifaces = {}
 
-node2 = request.RawPC("node2")
-node2.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:CENTOS66-64-STD"
-
-iface1 = node1.addInterface("if1")
-iface2 = node2.addInterface("if2")
+for name in nodeNames:
+   nodeobj = request.RawPC(name)
+   nodeobj.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:CENTOS66-64-STD"
+   ifacename = name + "_iface"
+   ifaceobj = nodeobj.addInterface(ifacename)
+   ifaces[ifacename] = ifaceobj
 
 link = request.LAN("lan")
-
-link.addInterface(iface1)
-link.addInterface(iface2)
-
-node1.addService(rspec.Execute(
-   shell="bash", 
-   command="sudo git clone https://github.com/benCoomes/teamKMBR.git /teamKMBR"))
-#node1.addService(rspec.Execute(
-#   shell="bash", 
-#   command="sudo chmod 755 /teamKMBR/*install.sh"))
-#node1.addService(rspec.Execute(
-#   shell="bash", 
-#   command="sudo /teamKMBR/mpi_install.sh"))
-
+for interface in ifaces:
+   link.addInterface(interface)
 
 # Print the RSpec to the enclosing page.
 portal.context.printRequestRSpec()
