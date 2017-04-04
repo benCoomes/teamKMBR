@@ -6,7 +6,7 @@
 
    # Format the MDT
    mkfs.lustre --fsname=lustre \
-   --mgsnode=mgs_mds@tcp --mdt --index=0 /dev/sdc
+   --mgsnode=128.104.222.29@tcp --mdt --index=0 /dev/sdc
    
    # Mount the MGT
    mkdir /mnt/mgt
