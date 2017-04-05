@@ -1,5 +1,4 @@
-"""An example of constructing a profile with two PCs loaded with
-CentOS and connected on a LAN. One node downloads and unzips an mpi tarball.
+"""This constructs 7 nodes connected on a lan to simulate an hpc cluster. 
 
 Instructions:
 Wait for the profile instance to start, and then log in to the host via the
@@ -24,7 +23,7 @@ for name in nodeNames:
 
 link = request.LAN("lan")
 for interface in ifaces:
-   link.addInterface(interface)
+   link.addInterface(ifaces[interface])
 
 # Print the RSpec to the enclosing page.
 portal.context.printRequestRSpec()
