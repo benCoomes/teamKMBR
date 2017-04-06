@@ -1,10 +1,13 @@
 #!/bin/bash
-wget https://www.open-mpi.org/software/ompi/v1.10/downloads/openmpi-1.10.3.tar.gz
+
+#wget https://www.open-mpi.org/software/ompi/v1.10/downloads/openmpi-1.10.3.tar.gz
+#use git repo, above link not stable
+cd /teamKMBR
 tar -xvf openmpi-1.10.3.tar.gz 
 rm openmpi-1.10.3.tar.gz
 cd openmpi-1.10.3
-./configure --prefix="/software/openmpi/1.10.3"
 
+./configure --prefix="/software/openmpi/1.10.3"
 make 
 make install
 
