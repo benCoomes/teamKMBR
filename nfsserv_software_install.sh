@@ -5,9 +5,12 @@
 # get software install scripts and envmodules tarball in repo
 echo "Cloning git repo containing set up files..."
 ssh -t $1 'sudo git clone https://github.com/benCoomes/teamKMBR.git /teamKMBR'
-ssh -t $1 'sudo chmod 755 /teamKMBR/mpi_install.sh'
-ssh -t $1 'sudo chmod 755 /teamKMBR/python_install.sh'
 echo "Done: Cloned git repo"
+
+# install environmentmodules
+echo "Installing environment modules"
+ssh -t $1 'sudo /teamKMBR/environment_modules_install.sh'
+echo "Done: environment modules installed"
 
 # install mpi to /software directory using script
 echo "Starting mpi install, this may take a few minutes..."
