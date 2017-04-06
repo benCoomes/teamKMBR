@@ -1,5 +1,5 @@
 #!/bin/bash
-
+yum install -y tcl
 mkdir /software/Modules
 mkdir /software/Modules/src
 cp /teamKMBR/modules-tcl-1.77.tar.gz /software/Modules/src
