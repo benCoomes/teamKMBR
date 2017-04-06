@@ -1,6 +1,6 @@
 #!/bin/sh
 
-workingpath='/users/mdrodge/teamKMBR/'
+workingpath='/root/teamKMBR/'
 
 if [ -e "$workingpath"config_mgs_mdt_log.txt ]; then
    # Nothing. Done.
