@@ -3,7 +3,7 @@ yum install -y tcl
 mkdir /software
 mkdir /software/Modules
 mkdir /software/Modules/src
-cp /teamKMBR/modules-tcl-1.77.tar.gz /software/Modules/src
+cp /teamKMBR/modules-tcl-1.775.tar.gz /software/Modules/src
 cd /software/Modules/src
 gunzip -c modules-tcl-1.775.tar.gz | tar xvf -
 cd modules-tcl-1.775
