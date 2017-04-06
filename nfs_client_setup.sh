@@ -1,11 +1,11 @@
-yum install nfs-utils nfs-utils-lib
+yum install -y nfs-utils nfs-utils-lib
 
-mkdir -p /mnt/nfs/home
+mkdir /software
 
 #use server ip here
-mount 128.104.222.172:/home /mnt/nfs/home
+mount nfsserv:/software /software
 
 #to check it is mounted, not necessary:
-df -h
+#df -h
 
 
