@@ -26,3 +26,6 @@ echo "Starting python install, this may take a few minutes..."
 ssh -t $1  'sudo -i /teamKMBR/python_install.sh'
 echo "Done: python and mpi4py installed"
 
+echo "Setting up nfs"
+ssh -t $1  'sudo /teamKMBR/nfs_server_setup.sh'
+echo "Done: NFS configured."
