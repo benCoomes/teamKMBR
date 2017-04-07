@@ -11,6 +11,12 @@ do
    sleep 1
 done
 
+if [ ! -e openmpi-1.10.3.tar.gz ]
+then
+   echo "Failed to download mpi package after multiple tries, exiting."
+   exit 1
+fi
+
 tar -xvf openmpi-1.10.3.tar.gz 
 rm openmpi-1.10.3.tar.gz
 cd openmpi-1.10.3
