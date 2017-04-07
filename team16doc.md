@@ -5,6 +5,7 @@ To emulate the described topology of Trestle, we used a total of 8 nodes. 2 node
 [diagram]: https://github.com/benCoomes/teamKMBR/blob/master/diagrams/simple_lustre_diagram.png "System Diagram"
 
 System Diagram: ![alt text][diagram]
+
 Network Topology: ![alt text][topology]
 
 # Modeling The Trestle System
