@@ -1,7 +1,16 @@
 #!/bin/bash
 
 wget https://www.open-mpi.org/software/ompi/v1.10/downloads/openmpi-1.10.3.tar.gz
-#use git repo, above link not stable
+
+let trycount=0
+while [ ! -e openmpi-1.10.3.tar.gz ] && [ $trycount -lt 3 ]
+do
+   echo "Failed to download mpi package, trying again..."
+   wget https://www.open-mpi.org/software/ompi/v1.10/downloads/openmpi-1.10.3.tar.gz
+   let trycount=trycount+1
+   sleep 1
+done
+
 tar -xvf openmpi-1.10.3.tar.gz 
 rm openmpi-1.10.3.tar.gz
 cd openmpi-1.10.3
