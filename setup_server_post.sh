@@ -1,8 +1,9 @@
 #!/bin/bash
 
    cd /root/teamKMBR
-
-   yum install openmpi net-snmp net-snmp-utils libyaml sg3_utils -y
+   
+   module load openmpi-1.10.3
+   yum install net-snmp net-snmp-utils libyaml sg3_utils -y
 
    # Download Lustre server modules
    # from https://downloads.hpdd.intel.com/public/lustre/lustre-2.7.0/el6.6/server/RPMS/x86_64/
