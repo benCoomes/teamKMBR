@@ -1,5 +1,4 @@
 #!/bin/bash
-# to be run after nfs_serv_setup.sh
 # to be run before client_software_config
 
 # get software install scripts and envmodules tarball in repo
