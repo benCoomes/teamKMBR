@@ -11,8 +11,8 @@ ssh -t $1 'module use /software/Modules/modulefiles'
 
 echo "Done. Node configured for shared software use."
 #make mount persist on reboot
-ssh -t $1 'sudo echo "#SHARED SOFTWARE SETUP" >> /etc/fstab'
-ssh -t $1 'sudo echo "nfsserv:/software /software nfs" >> /etc/fstab'
+ssh -t $1 'sudo git clone https://github.com/benCoomes/teamKMBR.git /teamKMBR'
+ssh -t $1 'sudo /teamKMBR/persist_mount.sh'
 
 #to check it is mounted, not necessary:
 #df -h
