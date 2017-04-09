@@ -27,6 +27,8 @@ Installing and using Enviornment Modules: Jeff Layton, Environment Modules - A G
 
 Custom Install of OpenMPI for a Clutser: Dwaraka Nath, Running an MPI Cluster within a LAN. http://mpitutorial.com/tutorials/running-an-mpi-cluster-within-a-lan/
 
+Use of genilib for automatic Cloudlab profile generation: Cloudlab Documentation: http://docs.cloudlab.us/geni-lib.html
+
 And of course, a copious amount of questions were answered by the Stack Overflow community. 
 
 
