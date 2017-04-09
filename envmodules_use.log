@@ -1,0 +1,19 @@
+Script started on Sun 09 Apr 2017 04:21:41 PM CDT
+]0;bcoomes@client3:~[?1034h[bcoomes@client3 ~]$ module list
+No Modulefiles Currently Loaded.
+]0;bcoomes@client3:~[bcoomes@client3 ~]$ module avail
+-------------------------------------------------------------------- /software/Modules/modulefiles ---------------------------------------------------------------------
+anaconda3-4.3.1  openmpi-1.10.3  
+]0;bcoomes@client3:~[bcoomes@client3 ~]$ mo[K[Kwhich mpicc
+/usr/bin/which: no mpicc in (/software/Modules/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/users/bcoomes/bin)
+]0;bcoomes@client3:~[bcoomes@client3 ~]$ which pip
+/usr/bin/which: no pip in (/software/Modules/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/users/bcoomes/bin)
+]0;bcoomes@client3:~[bcoomes@client3 ~]$ modue[Kle load openmpi-1.10.3
+]0;bcoomes@client3:~[bcoomes@client3 ~]$ which[K[K[K[K[Kmodule avail[K[K[K[K[K[K[K[Kle load anaconda3-4.3.1
+]0;bcoomes@client3:~[bcoomes@client3 ~]$ whih[Kch mpicc
+/software/openmpi/1.10.3/bin/mpicc
+]0;bcoomes@client3:~[bcoomes@client3 ~]$ which anaconda[K[K[K[K[K[K[K[Kpip
+/software/anaconda3/bin/pip
+]0;bcoomes@client3:~[bcoomes@client3 ~]$ exit
+
+Script done on Sun 09 Apr 2017 04:22:37 PM CDT
