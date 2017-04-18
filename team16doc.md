@@ -22,6 +22,7 @@ In summary,mpi, python and environment modules, NFS, and lastly Lustre are insta
 Finally, users need to be configured to use mpi, which requires paswordless ssh and automatic loading of mpi onto the path. ssh_setup.sh and mpi_user_setup.sh are used to accomplish this for each user. 
 
 # Validation
+To validate our results, we ran Ben's Assignment 4 Part 1 that computed the number of unique jobs in the job_events folder with our Trestle scripts. It successfully computed the number of unique jobs and we logged the output results in jobcount.log. 
 
 
 # Sources Used
