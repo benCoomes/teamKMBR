@@ -23,9 +23,11 @@ The ssh_setup.sh script configures all nodes for passwordless ssh access between
 
 Finally, users need to be configured to use mpi, which requires paswordless ssh and automatic loading of mpi onto the path. ssh_setup.sh and mpi_user_setup.sh are used to accomplish this for each user. 
 
+[results]: https://github.com/benCoomes/teamKMBR/blob/master/diagrams/log_capture.JPG "Validation Results"
 # Validation
-To validate our results, we ran Ben's Assignment 4 Part 1 that computed the number of unique jobs in the job_events folder with our Trestle scripts. It successfully computed the number of unique jobs and we logged the output results in jobcount.log. 
+To validate our results, we ran Ben's Assignment 4 Part 1 that computed the number of unique jobs in the job_events folder with our Trestle scripts.It successfully computed the number of unique jobs and we logged the output results in jobcount.log:
 
+![alt text][results]
 
 # Sources Used
 NFS install and configuration: Tim Brehm, 'Setting Up and NFS Server and Client on CentOS 7.2', on HowToForge website. https://www.howtoforge.com/tutorial/setting-up-an-nfs-server-and-client-on-centos-7/ 
