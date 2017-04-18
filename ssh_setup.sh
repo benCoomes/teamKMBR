@@ -1,28 +1,22 @@
+#usage: ./ssh_setup.sh <username>
 
-
-declare -a addrs=('rbecwar@clnode015.clemson.cloudlab.us' 'rbecwar@clnode002.clemson.cloudlab.us')
-#declare -a keys=()
+declare -a addrs=('clnode011.clemson.cloudlab.us' 'clnode015.clemson.cloudlab.us' 'clnode002.clemson.cloudlab.us' 'clnode006.clemson.cloudlab.us' 'clnode031.clemson.cloudlab.us' 'clnode025.clemson.cloudlab.us' 'clnode029.clemson.cloudlab.us')
 
 #for every address in the array, generate an ssh key if it does not exist, concatenate the public key onto a local file
 for i in "${addrs[@]}"
 do
-  if [ ! -f ~/.ssh/id_rsa.pub ]; then
-    ssh -t $i 'ssh-keygen -f ~/.ssh/id_rsa -t rsa -N ""'
+  ssh $1@$i "test -e ~/.ssh/id_rsa.pub"
+  if [ ! $? -eq 0 ]; then
+    ssh -t $1@$i 'ssh-keygen -f ~/.ssh/id_rsa -t rsa -N ""'
   fi
-  #keys=("${keys[@]}" "$(ssh -t $i 'cat ~/.ssh/id_rsa.pub')")
-  ssh -t $i 'cat ~/.ssh/id_rsa.pub' >> pubkeys.txt
+  ssh -t $1@$i 'cat ~/.ssh/id_rsa.pub' >> pubkeys.txt
 done
 
 #append the public keys list to the authorized_keys file of each remote address
 for i in "${addrs[@]}"
 do
-  cat pubkeys.txt| ssh $i 'cat >> ~/.ssh/authorized_keys'
+  cat pubkeys.txt| ssh $1@$i 'cat >> ~/.ssh/authorized_keys'
 done
-
-#for i in "${keys[@]}"
-#do
-#  echo $i
-#done
 
 rm pubkeys.txt
 
