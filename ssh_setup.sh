@@ -1,5 +1,11 @@
 #usage: ./ssh_setup.sh <username>
 
+if [ $# -eq 0 ]
+  then
+    echo "usage: ./ssh_setup.sh <username>"
+    exit 1
+fi
+
 declare -a addrs=('clnode011.clemson.cloudlab.us' 'clnode015.clemson.cloudlab.us' 'clnode002.clemson.cloudlab.us' 'clnode006.clemson.cloudlab.us' 'clnode031.clemson.cloudlab.us' 'clnode025.clemson.cloudlab.us' 'clnode029.clemson.cloudlab.us')
 
 #for every address in the array, generate an ssh key if it does not exist, concatenate the public key onto a local file
